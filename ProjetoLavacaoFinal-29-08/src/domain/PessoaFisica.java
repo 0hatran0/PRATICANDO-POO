@@ -50,10 +50,10 @@ public class PessoaFisica extends Cliente{ // Uma das especializações da class
     }
     
     // Metodos ...
-    @Override
-    public String toString() {
-        return "Cliente{" + "cpf=" + cpf + ", dataNascimento="+ dataNascimento +" "+ super.toString() +'}';
-    }
+//    @Override
+//    public String toString() {
+//        return "Cliente{" + "cpf=" + cpf + ", dataNascimento="+ dataNascimento +" "+ super.toString() +'}';
+//    }
     
     // Sobrescrever metodos obrigatórios da superclasse.
     @Override

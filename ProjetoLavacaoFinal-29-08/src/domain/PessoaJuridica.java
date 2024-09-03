@@ -45,11 +45,11 @@ public class PessoaJuridica extends Cliente { // Esta classe é uma especializa�
         this.inscricaoEstadual = inscricaoEstadual;
     }
 
-    @Override
-    public String toString() {
-        return  "Cliente{" + "cnpj=" + cnpj + ", inscricaoEstadual=" 
-                + inscricaoEstadual +" "+ super.toString() +'}';
-    }
+//    @Override
+//    public String toString() {
+//        return  "Cliente{" + "cnpj=" + cnpj + ", inscricaoEstadual=" 
+//                + inscricaoEstadual +" "+ super.toString() +'}';
+//    }
       
     // Sobrescrever metodos obrigatórios da superclasse.
     @Override

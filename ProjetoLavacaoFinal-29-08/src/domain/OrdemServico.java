@@ -20,7 +20,7 @@ public class OrdemServico {
     private double desconto;
     
     private EStatus status = EStatus.ABERTA;
-//    private Veiculo veiculo;
+    private Veiculo veiculo;
     private List <ItemOS> itensOS = new ArrayList<>();
     
     
@@ -28,12 +28,15 @@ public class OrdemServico {
     public OrdemServico() {
     }
 
-    public OrdemServico(long numero, LocalDate agenda, double desconto, EStatus status) {
+    public OrdemServico(long numero, LocalDate agenda, double desconto, Veiculo veiculo, EStatus status) {
         this.numero = numero;
         this.agenda = agenda;
         this.desconto = desconto;
+        this.veiculo = veiculo;
         this.status = status;
     }
+    
+   
     // Metedos de Acesso
 
     public long getNumero() {
@@ -76,13 +79,13 @@ public class OrdemServico {
         this.status = status;
     }
 
-//    public Veiculo getVeiculo() {
-//        return veiculo;
-//    }
-//
-//    public void setVeiculo(Veiculo veiculo) {
-//        this.veiculo = veiculo;
-//    }
+    public Veiculo getVeiculo() {
+        return veiculo;
+    }
+
+    public void setVeiculo(Veiculo veiculo) {
+        this.veiculo = veiculo;
+    }
 
     public List<ItemOS> getItensOS() {
         return itensOS;

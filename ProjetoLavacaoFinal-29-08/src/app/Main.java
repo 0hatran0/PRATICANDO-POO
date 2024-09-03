@@ -7,6 +7,7 @@ package app;
 import domain.EStatus;
 import domain.ItemOS;
 import domain.OrdemServico;
+import report.ImpressaoOS;
 import java.time.LocalDate;
 import datasource.DataSource;
 
@@ -23,7 +24,7 @@ public class Main {
 //        Servico sv2 = new Servico(2, "Pretinho", 20, ECategoria.PADRAO);
 //        Servico sv3 = new Servico(3, "Trocar Oleo", 30, ECategoria.PADRAO);
         
-        OrdemServico os = new OrdemServico(1,LocalDate.now(),5, EStatus.ABERTA);
+        OrdemServico os = new OrdemServico(1,LocalDate.now(),5, DataSource.getVeiclo(1),EStatus.ABERTA);
         
         ItemOS item1 = new ItemOS();
         item1.setValorServico(DataSource.getServico(1).getValor());
@@ -42,12 +43,14 @@ public class Main {
         os.add(item2);
         os.add(item3);
         
-        os.calcularServico();
+//        os.calcularServico();
 //        System.out.println(DataSource.getServico(1));
 //        System.out.println(os);
 //        System.out.println(item1);
-        
-        System.out.println(DataSource.getCliente(1).getDados());
+        System.out.println(ImpressaoOS.imprimirOS(os));
+        System.out.println("Relatorio");
+         
+//        System.out.println(DataSource.getCliente(1).getDados());
         
     }
 }
