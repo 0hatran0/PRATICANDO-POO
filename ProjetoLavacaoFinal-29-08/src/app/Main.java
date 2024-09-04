@@ -10,6 +10,7 @@ import domain.OrdemServico;
 import report.ImpressaoOS;
 import java.time.LocalDate;
 import datasource.DataSource;
+import static report.Relatorio.imprimir;
 
 /**
  *
@@ -40,14 +41,7 @@ public class Main {
         os.add(item2);
 //        os.add(item3);
         
-//        os.calcularServico();
-//        System.out.println(DataSource.getServico(1));
-//        System.out.println(os);
-//        System.out.println(item1);
-        System.out.println(ImpressaoOS.imprimirOS(os));
-        System.out.println("Relatorio");
-         
-//        System.out.println(DataSource.getCliente(1).getDados());
-        
+//        System.out.println(ImpressaoOS.imprimirOS(os));
+        System.out.println(imprimir(DataSource.getCliente(2)));   
     }
 }

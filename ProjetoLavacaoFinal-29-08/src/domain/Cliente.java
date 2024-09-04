@@ -60,7 +60,7 @@ public abstract class Cliente implements ICliente { // Classe Generica Abstrata
         return pontuacao;
     }
 
-    public List<Veiculo> getVeiuclos() {
+    public List<Veiculo> getVeiculos() {
         return veiculos;
     }
     // --> Setters --> permite configurar indiretamente valores dentro de um objeto (atributos). 

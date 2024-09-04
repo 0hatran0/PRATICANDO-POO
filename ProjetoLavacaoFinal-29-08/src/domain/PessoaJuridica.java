@@ -55,13 +55,13 @@ public class PessoaJuridica extends Cliente { // Esta classe √© uma especializa√
     @Override
     public String getDados() {
         return  super.getDados() + " cnpj=" + cnpj + ", inscricaoEstadual=" 
-                + inscricaoEstadual + "\nDados do " + super.getVeiuclos();
+                + inscricaoEstadual + "\nDados do " + super.getVeiculos();
     }
     
     @Override
     public String getDados(String Observacao) {
         return  super.getDados() + " cnpj=" + cnpj + ", inscricaoEstadual=" 
-                + inscricaoEstadual + "\nDados do " + super.getVeiuclos() + 
+                + inscricaoEstadual + "\nDados do " + super.getVeiculos() + 
                 " "+ Observacao +'}';
     }
 }

@@ -59,13 +59,13 @@ public class PessoaFisica extends Cliente{ // Uma das especializações da class
     @Override
     public String getDados() {
         return  super.getDados() + " cpf=" + cpf + ", dataNascimento="
-                + dataNascimento + "\nDados do " + super.getVeiuclos() ;
+                + dataNascimento + "\nDados do " + super.getVeiculos() ;
     }
 
     @Override
     public String getDados(String Observacao) {
         return  super.getDados() + " cpf=" + cpf + ", dataNascimento="
-                + dataNascimento + "\nDados do " + super.getVeiuclos()
+                + dataNascimento + "\nDados do " + super.getVeiculos()
                 + " "+ Observacao +'}';
     }
       
