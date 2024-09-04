@@ -20,9 +20,6 @@ public class Main {
     public static void main(String[] args) {
         
         DataSource.inicializandoDados();
-//        Servico sv1 = new Servico(1, "Completa", 10, ECategoria.PADRAO);
-//        Servico sv2 = new Servico(2, "Pretinho", 20, ECategoria.PADRAO);
-//        Servico sv3 = new Servico(3, "Trocar Oleo", 30, ECategoria.PADRAO);
         
         OrdemServico os = new OrdemServico(1,LocalDate.now(),5, DataSource.getVeiclo(1),EStatus.ABERTA);
         
@@ -32,16 +29,16 @@ public class Main {
         item1.setObservacoes("A");
         ItemOS item2 = new ItemOS();
         item2.setValorServico(25.0);
-        item2.setServico(DataSource.getServico(2));
+        item2.setServico(DataSource.getServico(3));
         item2.setObservacoes("B");
-        ItemOS item3 = new ItemOS();
-        item3.setValorServico(DataSource.getServico(3).getValor());
-        item3.setServico(DataSource.getServico(3));
-        item3.setObservacoes("C");
+//        ItemOS item3 = new ItemOS();
+//        item3.setValorServico(DataSource.getServico(3).getValor());
+//        item3.setServico(DataSource.getServico(3));
+//        item3.setObservacoes("C");
         
         os.add(item1);
         os.add(item2);
-        os.add(item3);
+//        os.add(item3);
         
 //        os.calcularServico();
 //        System.out.println(DataSource.getServico(1));

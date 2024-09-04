@@ -97,7 +97,7 @@ public class OrdemServico {
         for(ItemOS itemOS : itensOS){
             somaDoPrecoDeTodosServicos += itemOS.getValorServico();
         }
-        return total = somaDoPrecoDeTodosServicos;
+        return total = somaDoPrecoDeTodosServicos - (somaDoPrecoDeTodosServicos*desconto/100);
     }
     
     public void add(ItemOS itemOS){
