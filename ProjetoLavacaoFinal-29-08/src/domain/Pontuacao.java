@@ -4,6 +4,8 @@
  */
 package domain;
 
+import exceptions.ExceptionLavacao;
+
 /**
  *
  * @author PC

@@ -10,6 +10,7 @@ import domain.OrdemServico;
 import report.ImpressaoOS;
 import java.time.LocalDate;
 import datasource.DataSource;
+import exceptions.ExceptionLavacao;
 import static report.Relatorio.imprimir;
 
 /**
@@ -41,7 +42,24 @@ public class Main {
         os.add(item2);
 //        os.add(item3);
         
-//        System.out.println(ImpressaoOS.imprimirOS(os));
-        System.out.println(imprimir(DataSource.getCliente(2)));   
+        System.out.println(ImpressaoOS.imprimirOS(os));
+//        System.out.println(imprimir(DataSource.getCliente(1)));  
+
+        // Excessao para caso insira um numero com virgula na pontuacao
+//        try{
+//            DataSource.getCliente(1).getPontuacao().subtrair(0.5);
+//        }catch(RuntimeException e){
+//            System.out.println("O sistema aceita apenas numeros inteiros");
+//        }
+                
+        //Excessao caso remova um veiculo que não existe
+//        ExceptionLavacao.ExcessaoRemoverVeiculo(DataSource.getVeiclo(4));
+//        try{
+//            DataSource.getCliente(2).remove(DataSource.getVeiclo(4));
+//        }catch(NullPointerException e){
+//            System.out.println("VEICULO NAO EXISTE!!\n");
+//        }
+        
+//        System.out.println(imprimir(DataSource.getCliente(2))); 
     }
 }

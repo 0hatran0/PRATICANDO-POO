@@ -4,10 +4,22 @@
  */
 package exceptions;
 
+import datasource.DataSource;
+import domain.Veiculo;
+
+
 /**
  *
  * @author PC
  */
 public class ExceptionLavacao {
-    
+    public static void ExcessaoRemoverVeiculo(Veiculo veiculo){
+        try{
+            DataSource.getCliente(2).remove(veiculo);
+        }catch(Exception ex){
+            System.out.println("VEICULO NAO EXISTE!!");
+            System.out.println("ERRO:"+ex.getMessage()+"\n");
+//            ex.printStackTrace();
+        }
+    }
 }
