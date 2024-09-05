@@ -54,7 +54,7 @@ public class DataSource {
         veiculos.add(new Veiculo(2,"BBB-222","SUV",modelos.get(1),cores.get(1)));
         veiculos.add(new Veiculo(3,"CCC-333","Esportivo",modelos.get(2),cores.get(2)));
         
-        clientes.add(new PessoaFisica("333.333.333-33", "2000-04-01", 1, "Carlos", "93333-3333", "carlos@gmail.com", LocalDate.now()));
+        clientes.add(new PessoaFisica("333.333.333-33", LocalDate.now(), 1, "Carlos", "93333-3333", "carlos@gmail.com", LocalDate.now()));
         clientes.get(0).add(veiculos.get(0));
         clientes.add(new PessoaJuridica("22.222555/2255-55", "222.222.555.555", 2, "Bruna", "92222-5555", "bruna@gmail.com", LocalDate.now()));
         clientes.get(1).add(veiculos.get(1));

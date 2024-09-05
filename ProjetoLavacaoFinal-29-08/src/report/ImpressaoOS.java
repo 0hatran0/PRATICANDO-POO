@@ -20,18 +20,11 @@ public class ImpressaoOS {
         String formatValor = "%5.2f";
 
         DateTimeFormatter formatterData = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-        DateTimeFormatter formatterTime = DateTimeFormatter.ofPattern("HH:mm:ss");
         
         sb.append("       ***** ORDEM DE SERVICO ******        ").append("\n");
         sb.append("Numero da Ordem........: ").append(os.getNumero()).append("\n");
         sb.append("Status........: ").append(os.getStatus()).append("\n");
-//        sb.append("Agenda: ")
-//        .append("\n Data......:").append(os.getAgenda().format(formatterData)).append("\n")
-//        .append("\n Horario......:").append(os.getAgenda().format(formatterTime)).append("\n");
-
-//        sb.append("Data...........: ").append(cf.getData().format(formatterData)).append("\n");
-//        sb.append("     Horario...: ").append(cf.getHora().format(formatterTime)).append("\n");
-
+        sb.append("Data......:").append(os.getAgenda().format(formatterData)).append("\n");
         sb.append("Desconto........: ").append(os.getDesconto()).append("\n");
         sb.append("==========[ CLIENTE ]============").append("\n");
         sb.append("Cliente........: ").append(os.getVeiculo().getCliente().getNome()).append("\n");

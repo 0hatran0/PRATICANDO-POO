@@ -13,19 +13,19 @@ import java.time.LocalDate;
 public class PessoaFisica extends Cliente{ // Uma das especializações da classe Cliente
     // Atributos
     private String cpf;
-    private String dataNascimento;
+    private LocalDate dataNascimento;
 
     // Metodos Especiais
     // --> Construtor --> método que é executado automaticamente quando uma classe é instanciada (objeto é criado).
     public PessoaFisica() {
     }
 
-    public PessoaFisica(String cpf, String dataNascimento) {
+    public PessoaFisica(String cpf, LocalDate dataNascimento) {
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
     }
     
-    public PessoaFisica(String cpf, String dataNascimento, int id, String nome, String celular, String emial, LocalDate dataCadastro) {
+    public PessoaFisica(String cpf, LocalDate dataNascimento, int id, String nome, String celular, String emial, LocalDate dataCadastro) {
         super(id, nome, celular, emial, dataCadastro);
         this.cpf = cpf;
         this.dataNascimento = dataNascimento;
@@ -36,7 +36,7 @@ public class PessoaFisica extends Cliente{ // Uma das especializações da class
         return cpf;
     }
     
-    public String getDataNascimento() {
+    public LocalDate getDataNascimento() {
         return dataNascimento;
     }
     
@@ -45,7 +45,7 @@ public class PessoaFisica extends Cliente{ // Uma das especializações da class
         this.cpf = cpf;
     }
     
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(LocalDate dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
     
