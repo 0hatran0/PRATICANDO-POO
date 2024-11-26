@@ -23,24 +23,29 @@ public class ServicoDAO {
     }
 
     public boolean inserir(Servico servico) {
-        String sql = "INSERT INTO servico(nome) VALUES(?)";
+        String sql = "INSERT INTO servico(descricao, valor, pontos, categoria) VALUES(?,?,?,?);";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, servico.getNome());
+            stmt.setString(1, servico.getDescricao());
+            stmt.setDouble(2, servico.getValor());
+            stmt.setInt(3, servico.getPontos());
+            stmt.setString(4, servico.getCategoria().name());
             stmt.execute();
             return true;
-        } catch (SQLException ex) {
+        } catch (SQLException ex) { 
             Logger.getLogger(ServicoDAO.class.getName()).log(Level.SEVERE, null, ex);
             return false;
         }
     }
 
     public boolean alterar(Servico servico) {
-        String sql = "UPDATE servico SET nome=? WHERE id=?";
+        String sql = "UPDATE servico SET descricao=?, valor=?, pontos=?, categoria=? WHERE id=?";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
-            stmt.setString(1, servico.getNome());
-            stmt.setInt(2, servico.getId());
+            stmt.setString(1, servico.getDescricao());
+            stmt.setDouble(2, servico.getValor());
+            stmt.setInt(3, servico.getPontos());
+            stmt.setString(4, servico.getCategoria().name());
             stmt.execute();
             return true;
         } catch (SQLException ex) {
@@ -71,7 +76,10 @@ public class ServicoDAO {
             while (resultado.next()) {
                 Servico servico = new Servico();
                 servico.setId(resultado.getInt("id"));
-                servico.setNome(resultado.getString("nome"));
+                servico.setDescricao(resultado.getString("nome"));
+//                servico.setValor(resultado.getDouble("descrição"));
+//                servico.setPontos(resultado.getInt("pontos"));
+//                servico.setCategoria(resultado.getString("categoria"));
                 retorno.add(servico);
             }
         } catch (SQLException ex) {
@@ -94,7 +102,8 @@ public class ServicoDAO {
             ResultSet resultado = stmt.executeQuery();
             if (resultado.next()) {
                 retorno.setId(resultado.getInt("id"));
-                retorno.setNome(resultado.getString("nome"));
+                retorno.setDescricao(resultado.getString("nome"));
+                // ADD resto das informações
             }
         } catch (SQLException ex) {
             Logger.getLogger(ServicoDAO.class.getName()).log(Level.SEVERE, null, ex);
