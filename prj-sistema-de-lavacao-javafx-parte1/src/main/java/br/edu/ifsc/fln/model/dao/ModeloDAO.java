@@ -24,6 +24,7 @@ public class ModeloDAO {
 
     public boolean inserir(Marca marca) {
         String sql = "INSERT INTO marca(nome) VALUES(?)";
+        String sql = "INSERT INTO marca(nome) VALUES(?)";
         try {
             PreparedStatement stmt = connection.prepareStatement(sql);
             stmt.setString(1, marca.getNome());

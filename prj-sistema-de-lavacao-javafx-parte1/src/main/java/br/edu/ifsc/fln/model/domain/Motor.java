@@ -18,7 +18,7 @@ public class Motor {
         return potencia;
     }
 
-    public ETipoCombustivel getTipoCobustivel() {
+    public ETipoCombustivel getTipoCombustivel() {
         return tipoCobustivel;
     }
     
@@ -26,7 +26,7 @@ public class Motor {
         this.potencia = potencia;
     }
 
-    public void setTipoCobustivel(ETipoCombustivel tipoCobustivel) {
+    public void setTipoCombustivel(ETipoCombustivel tipoCobustivel) {
         this.tipoCobustivel = tipoCobustivel;
     }
 
